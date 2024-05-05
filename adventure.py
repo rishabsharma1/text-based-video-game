@@ -10,6 +10,7 @@ f = open(str(sys.argv[1] ) )
 rooms = []
 try:
     raw_rooms = json.load(f)
+    print(type(raw_rooms))
     if(type(raw_rooms) is not list):
         raise Exception("Given map should be a list")
     for room in raw_rooms:
