@@ -14,7 +14,7 @@ try:
     if(type(raw_rooms) is not dict and 'rooms' not in raw_rooms.keys()):
         raise Exception("Given map should be a list")
     print(raw_rooms['rooms'])
-    raw_rooms['rooms']=roomNamesToNumber(raw_rooms['rooms'])
+    raw_rooms['rooms']=roomNamesToNumbers(raw_rooms['rooms'])
     for room in raw_rooms['rooms']:
         rooms.append(validateRoom(room, len(raw_rooms['rooms']) ) )
 except Exception as e:
