@@ -1,0 +1,177 @@
+[{
+		"name": "Human Pods Room",
+		"desc": "After a alien invasion on earth, Aliens are ruling the earth\nThey wanted to experiment thing on humans \nSome humans are being transported to their planet\nYour pod has a breakdown and you wake up\nYour objective is to reach the Main Control Room and kill their brigadier\nAliens are far stronger and fast then humans\nSo you need advanced and powerful weapons and infinite power generator",
+		"interactables": {
+			"Supervisor": {
+				"dailogue": "There is some breakdown with your pod\nWe will try to fix it\nIn the mean time you can go around the spaceship have some food and etc.,\nDont go towards restriced area"
+			}
+		},
+		"exits": {
+			"north": 1,
+			"northeast": 2,
+			"northwest": 3
+		},
+		"win": "FALSE"
+	},
+	{
+		"name": "Cafeteria",
+		"desc": "This is Cafeteria\nYou can have some food\nYou can pick some food",
+		"items": ["sandwich", "pizza", "coke"],
+		"exits": {
+			"south": 0,
+			"northeast": 5
+		},
+		"win": "False"
+	},
+	{
+		"name": "Chemical Laboratory",
+		"desc": "This is a chemical Laboratory\nYou can pick some cchemicals which can be useful to you",
+		"interactables": {
+			"Chemist": {
+				"dailogue": "There are some powerful cchemicals be careful"
+			}
+		},
+		"exits": {
+			"north": 5,
+			"southwest": 0
+		},
+		"items": ["radium", "uranium", "sodium"],
+		"win": "False"
+	},
+	{
+		"name": "Tools Room",
+		"desc": "They are some basic tools and items \nSome items may be useful",
+		"exits": {
+			"north": 9,
+			"southeast": 0,
+			"west": 4,
+			"south": 8
+		},
+		"items": ["neptuniumrod", "ironrod", "screwdrivers"],
+		"win": "False"
+	},
+	{
+		"name": "Ammunation",
+		"desc": "This is ammu nation room\nGuard is feeling so exhuasted\nUse this situation to get a weapmn ",
+		"interactables": {
+			"Gaurd": {
+				"dailogue": "I am feeling exhuasted,i cant give you anything",
+				"give": {
+					"energydrink": "laser"
+				}
+			}
+		},
+		"exits": {
+			"east": 3
+		}
+	},
+	{
+		"name": "Lobby",
+		"desc": "This is a just a empty space with one vending machine\n give a coin to Vending machine to take a energy drink",
+		"interactables": {
+			"Vendingmachine": {
+				"dailogue": "Insert coin to get a energydrink",
+				"give": {
+					"coin": "energydrink"
+				}
+			}
+		},
+		"exits": {
+			"south": 2,
+			"southwest": 1,
+			"north": 6,
+			"northwest": 7,
+			"east": 10
+		},
+		"items": ["coin"],
+		"win": "False"
+
+	},
+	{
+		"name": "Physics Laboratory",
+		"desc": "This is Physics Laboratory\nYou can have a chat with scientist\n",
+		"interactables": {
+			"scientist": {
+				"dailogue": "I am busy right know\nI need some sodium for my experiment",
+				"give": {
+					"sodium": "quantumreactorprototype"
+				}
+			}
+		},
+		"exits": {
+			"south": 5
+		},
+		"win": "False"
+	},
+	{
+		"name": "Medical Hall",
+		"desc": "This is a Medical Hall\n You need pills to make Secuirty gaurd sleep",
+		"interactables": {
+			"Doctor": {
+				"dailogue": "I am feeling hungry\n",
+				"give": {
+					"sandwich": "pills"
+				}
+			}
+		},
+		"exits": {
+			"southeast": 5
+		},
+		"win": "False"
+	},
+	{
+		"name": "Fuel Room",
+		"desc": "This is a Fuel Room \nThere is secuirty guard you need to make sure he takes a nap",
+		"interactables": {
+			"Security": {
+				"dailogue": "Go away from this room",
+				"give": {
+					"pills": "plutonium"
+				}
+			}
+		},
+		"exits": {
+			"north": 3
+		},
+		"win": "False"
+	},
+	{
+		"name": "Experiment Room",
+		"desc": "This is a Experiment Room\nYou can try special actions here\nYou can know how to craft a weapon by interacting with crafter\nYou need fuel\nPowerful tool\n",
+		"interactables": {
+			"reactorcrafter": {
+				"dailogue": "To use me you can use command 'assemble'\n"
+			}
+		},
+		"special": {
+			"assemble": {
+				"checklist": ["plutonium", "quantumreactorprototype", "neptuniumrod"],
+				"success": "quantumreactor"
+			}
+		},
+		"exits": {
+			"south": 3
+		},
+		"win": "False"
+	},
+	{
+		"name": "Boss Room",
+		"desc": "This is a Boss Room\nYou can try special actions here\nUse 'attack' to kill brigadier\nYou need special weapon and energy generator\nYou may lose if don't have weapon\n",
+		"interactables": {
+			"brigadier": {
+				"dailogue": "Stay out of me\n"
+			}
+		},
+		"special": {
+			"attack": {
+				"checklist": ["laser", "quantumreactor"],
+				"success": "win",
+				"failure": "lose"
+			}
+		},
+		"win": "True",
+		"exits": {
+			"west": 5
+		}
+	}
+]
