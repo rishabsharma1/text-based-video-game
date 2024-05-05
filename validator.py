@@ -68,6 +68,9 @@ def validateRoom(room, length):
     return room
 def roomNamesToNumbers(rooms):
     roomNames = [r['name'] for r in rooms]
+    rNames = set(roomNames)
+    if(len(rNames)!=len(roomNames)):
+        raise Exception("Duplicate Room Names")
     for i in range(len(rooms)):
         room = rooms[i]
         for exit in room['exits'].keys():
