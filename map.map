@@ -1,4 +1,6 @@
-[{
+{ "start": "Human Pods Room",
+  "rooms": [
+	  {
 		"name": "Human Pods Room",
 		"desc": "After a alien invasion on earth, Aliens are ruling the earth\nThey wanted to experiment thing on humans \nSome humans are being transported to their planet\nYour pod has a breakdown and you wake up\nYour objective is to reach the Main Control Room and kill their brigadier\nAliens are far stronger and fast then humans\nSo you need advanced and powerful weapons and infinite power generator",
 		"interactables": {
@@ -174,4 +176,5 @@
 			"west": 5
 		}
 	}
-]
+        ]
+}
