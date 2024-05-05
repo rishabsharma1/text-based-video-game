@@ -13,7 +13,7 @@ try:
     raw_rooms = json.load(f)
     if(type(raw_rooms) is not dict):
         raise Exception("Given map should be dict")
-    if('rooms' not in raw_rooms.keys() and 'start' not in raw_rooms.keys()):
+    if('rooms' not in raw_rooms.keys() or 'start' not in raw_rooms.keys()):
         raise Exception("Map should defenitley have a start and rooms")
     raw_rooms['rooms']=roomNamesToNumbers(raw_rooms['rooms'])
     for room in raw_rooms['rooms']:
