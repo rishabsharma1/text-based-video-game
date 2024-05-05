@@ -14,7 +14,7 @@ try:
         raise Exception("Given map should be a list")
     print(raw_rooms['rooms'])
     for room in raw_rooms['rooms']:
-        rooms.append(validateRoom(room, len(raw_rooms.['rooms']) ) )
+        rooms.append(validateRoom(room, len(raw_rooms['rooms']) ) )
 except Exception as e:
     print('Error', e)
     exit()
