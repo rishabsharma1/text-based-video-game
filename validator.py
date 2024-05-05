@@ -24,35 +24,35 @@ def validateRoom(room, length):
     exits = {}
     if((type(room['exits'] ) is not dict) ):
         raise Exception("Room exits should be a dictonary")
-    for direct in room['exits'].keys():
-        if(room['exits'][direct] >= length or room['exits'][direct] < 0):
+    for exit in room['exits'].keys():
+        if(room['exits'][exit] >= length or room['exits'][exit] < 0):
             raise Exception("Room exit should be valid room id object")
-        exits[direct.lower()] = room['exits'][direct]
+        exits[exit.lower()] = room['exits'][exit]
     room['exits'] = exits
     special = {}
     if((type(room['special'] ) is not dict) ):
         raise Exception("Room special commands should be a dictonary")
     interactables = {}
-    for key in room['interactables'].keys():
-        for key1 in room['interactables'][key]:
-            if(key1 not in ['dailogue','give'] ):
+    for index in room['interactables'].keys():
+        for index1 in room['interactables'][index]:
+            if(index1 not in ['dailogue','give'] ):
                 raise Exception("Interactables should only dailogue and give keys")
-            if(key1 == "give" and type( room['interactables'][key][key1] ) is not dict ):
+            if(index1 == "give" and type( room['interactables'][index][index1] ) is not dict ):
                 raise Exception("Give key should have dictonary of acceptable items and exchanging goods as value")
-        interactables[key.lower() ] = room['interactables'][key]
+        interactables[index.lower() ] = room['interactables'][index]
     room['interactables'] = interactables
-    for key in room['special'].keys():
-        if(type(room['special'][key] ) is not dict):
+    for index in room['special'].keys():
+        if(type(room['special'][index] ) is not dict):
             raise Exception("Room special commands shoud be a dcitonary")
-        if('checklist' not in room['special'][key].keys() and 'success' not in room['special'][key].keys() and type(room['special'][key]['checklist'] ) is not dict and type(room['special'][key]['success'] ) is not str):
+        if('checklist' not in room['special'][index].keys() and 'success' not in room['special'][index].keys() and type(room['special'][index]['checklist'] ) is not dict and type(room['special'][index]['success'] ) is not str):
             raise Exception("Room special commands shoud have items requiment and success item")
         itms = []
-        for elems in room['special'][key]['checklist']:
+        for elems in room['special'][index]['checklist']:
             itms.append(elems.lower() )
-        if('failure' not in room['special'][key].keys() ):
-            special[key.lower()] = {'checklist' : itms, 'success' : room['special'][key]['success'].lower()}
+        if('failure' not in room['special'][index].keys() ):
+            special[index.lower()] = {'checklist' : itms, 'success' : room['special'][index]['success'].lower()}
         else:
-            special[key.lower() ] = {'checklist' : itms, 'success' : room['special'][key]['success'].lower(), 'failure' : room['special'][key]['failure'] }
+            special[index.lower() ] = {'checklist' : itms, 'success' : room['special'][key]['success'].lower(), 'failure' : room['special'][index]['failure'] }
     room['special'] = special
     items = []
     if(len(room['items'] ) > 0 ):
