@@ -15,6 +15,8 @@ try:
         raise Exception("Given map should be dict")
     if('rooms' not in raw_rooms.keys() or 'start' not in raw_rooms.keys()):
         raise Exception("Map should defenitley have a start and rooms")
+    if(raw_rooms['start']!=raw_rooms['rooms'][0]['name']):
+        raise Exception("Map should defenitley have a start as first room name")
     raw_rooms['rooms']=roomNamesToNumbers(raw_rooms['rooms'])
     for room in raw_rooms['rooms']:
         rooms.append(validateRoom(room, len(raw_rooms['rooms']) ) )
