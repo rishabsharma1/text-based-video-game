@@ -68,3 +68,13 @@ def validateRoom(room, length):
     if(type(room['win'] ) is not bool):
         raise Exception("winning is possible or not should be a boolean in the room")
     return room
+def roomNamesToNumbers(rooms):
+    roomNames = [r['name'] for r in rooms]
+    for i in range(len(rooms)):
+        room = rooms[i]
+        for exit in room['exits'].keys():
+            if(type(room['exits'][exit]) is str and room['exits'][exit] in roomNames):
+                rooms[i]['exits'][exit] = roomNames.index(room['exits'][exit])
+            elif(type(room['exits'][exit]) is str):
+                raise Exception('room exits have invalid keys')
+    return rooms
