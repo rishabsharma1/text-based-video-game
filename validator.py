@@ -1,5 +1,4 @@
 def validateRoom(room, length):
-    print(room)
     if(type(room) is not dict):
         raise Exception("List should have valid rooms which are dictionries")
     if(('items' not in room.keys() ) ):
@@ -26,7 +25,6 @@ def validateRoom(room, length):
     if((type(room['exits'] ) is not dict) ):
         raise Exception("Room exits should be a dictonary")
     for direct in room['exits'].keys():
-        print(room['exits'][direct],length)
         if(room['exits'][direct] >= length or room['exits'][direct] < 0):
             raise Exception("Room exit should be valid room id object")
         exits[direct.lower()] = room['exits'][direct]
