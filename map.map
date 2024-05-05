@@ -28,7 +28,7 @@
 		"desc": "This is a chemical Laboratory\nYou can pick some cchemicals which can be useful to you",
 		"interactables": {
 			"Chemist": {
-				"dailogue": "There are some powerful cchemicals be careful"
+				"dailogue": "There are some powerfull cchemicals be careful"
 			}
 		},
 		"exits": {
