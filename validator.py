@@ -1,4 +1,5 @@
 def validateRoom(room, length):
+    print(room)
     if(type(room) is not dict):
         raise Exception("List should have valid rooms which are dictionries")
     if(('items' not in room.keys() ) ):
