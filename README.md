@@ -4,7 +4,7 @@ I spent 50 hours developing the functional code.
 I tested the code manually using a variety of inputs and different map configurations.
 During testing, I made sure to cover all possible scenarios.
 I believe I've fixed all the bugs I found.
-There were some bugs such as i couldnt accept a item with spaces in it as i was using a split. Later i tackled it with mereging the splited commands accoring to main command
+There were some bugs such as i couldnt accept a item with spaces in it as i was using a split. Later i tackled it with mereging the splited commands according to main command
 I assumed exits are only directions and placed a unneccessary validation which ruled out other exits,after removing it evrything worked fine.
 I tried different types of printing sequences to resolve the mismatch in printing
 Regarding code extensions and interactions,
