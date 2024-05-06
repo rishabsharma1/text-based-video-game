@@ -2,7 +2,7 @@
   "rooms": [
 	  {
 		"name": "Human Pods Room",
-		"desc": "After a alien invasion on earth, Aliens are ruling the earth\nThey wanted to experiment thing on humans \nSome humans are being transported to their planet\nYour pod has a breakdown and you wake up\nYour objective is to reach the Main Control Room and kill their brigadier\nAliens are far stronger and fast then humans\nSo you need advanced and powerful weapons and infinite power generator",
+		"desc": "After a alien invasion on earth, Aliens started ruling on planet earth\nTo learn more about humans they started  experimenting things on humans \nSome humans are being transported to their planet\nYour pod has a breakdown and you wake up\nYour objective is to reach the Main Control Room and kill their brigadier\nRemember that Aliens are far stronger and fast then humans\nSo you will need advanced and powerful weapons and infinite power source",
 		"interactables": {
 			"Supervisor": {
 				"dailogue": "There is some breakdown with your pod\nWe will try to fix it\nIn the mean time you can go around the spaceship have some food and etc.,\nDont go towards restriced area"
@@ -17,8 +17,8 @@
 	},
 	{
 		"name": "Cafeteria",
-		"desc": "This is Cafeteria\nYou can have some food\nYou can pick some food",
-		"items": ["sandwich", "pizza", "coke"],
+		"desc": "Welcome to  Cafeteria\nYou can eat whart you want \nYou can carry some food too ",
+		"items": ["sandwich","pasta","coffee" ,"pizza", "coke",],
 		"exits": {
 			"south": 0,
 			"northeast": 5
@@ -26,11 +26,11 @@
 		"win": "False"
 	},
 	{
-		"name": "Chemical Laboratory",
-		"desc": "This is a chemical Laboratory\nYou can pick some cchemicals which can be useful to you",
+		"name": "Laboratory",
+		"desc": "This is a chemical Laboratory\n pick some chemicals which can be useful to you",
 		"interactables": {
 			"Chemist": {
-				"dailogue": "There are some powerfull cchemicals be careful"
+				"dailogue": "There are some hazardous chemicals so be careful :-"
 			}
 		},
 		"exits": {
@@ -42,7 +42,7 @@
 	},
 	{
 		"name": "Tools Room",
-		"desc": "They are some basic tools and items \nSome items may be useful",
+		"desc": "The tool room is full of basic items \n Some items may be useful",
 		"exits": {
 			"north": 9,
 			"southeast": 0,
@@ -53,13 +53,13 @@
 		"win": "False"
 	},
 	{
-		"name": "Ammunation",
-		"desc": "This is ammu nation room\nGuard is feeling so exhuasted\nUse this situation to get a weapmn ",
+		"name": "Ammunation Room",
+		"desc": "This is ammunation room\nGuard is sick \nUse this situation to get a weapon ",
 		"interactables": {
 			"Gaurd": {
-				"dailogue": "I am feeling exhuasted,i cant give you anything",
+				"dailogue": "i am sick ,i cant give you anything today ",
 				"give": {
-					"energydrink": "laser"
+					"medicine": "dolokind"
 				}
 			}
 		},
@@ -69,12 +69,12 @@
 	},
 	{
 		"name": "Lobby",
-		"desc": "This is a just a empty space with one vending machine\n give a coin to Vending machine to take a energy drink",
+		"desc": "This is a just a empty space but machine to get basic medication \n give a coin to Vending machine to take a medicine",
 		"interactables": {
 			"Vendingmachine": {
-				"dailogue": "Insert coin to get a energydrink",
+				"dailogue": "Insert coin to get a dolokind",
 				"give": {
-					"coin": "energydrink"
+					"coin": "medicine"
 				}
 			}
 		},
@@ -123,7 +123,7 @@
 	},
 	{
 		"name": "Fuel Room",
-		"desc": "This is a Fuel Room \nThere is secuirty guard you need to make sure he takes a nap",
+		"desc": "This is a Fuel Room \nThere is security guard you need to make sure he takes a nap",
 		"interactables": {
 			"Security": {
 				"dailogue": "Go away from this room",
@@ -138,8 +138,8 @@
 		"win": "False"
 	},
 	{
-		"name": "Experiment Room",
-		"desc": "This is a Experiment Room\nYou can try special actions here\nYou can know how to craft a weapon by interacting with crafter\nYou need fuel\nPowerful tool\n",
+		"name": "Action Room",
+		"desc": "This is a Action Room\nYou can try special actions here\nYou can know how to craft a weapon by interacting with crafter\nYou need fuel\nPowerful tool\n",
 		"interactables": {
 			"reactorcrafter": {
 				"dailogue": "To use me you can use command 'assemble'\n"
