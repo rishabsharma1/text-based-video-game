@@ -1,6 +1,6 @@
 Rishab sharma  rsharma10@stevens.edu
 https://github.com/rishabsharma1/text-based-video-game
-I spent 50 hours developing the functional code.
+I spent 15 hours developing the functional code.
 I tested the code manually using a variety of inputs and different map configurations.
 During testing, I made sure to cover all possible scenarios.
 I believe I've fixed all the bugs I found.
